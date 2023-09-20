@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class StudentService {
+public class UsersService {
     private UserMongoRepository mongoRepository;
 
     @Autowired
-    public StudentService(UserMongoRepository userMongoRepository) {
+    public UsersService(UserMongoRepository userMongoRepository) {
         this.mongoRepository = userMongoRepository;
     }
 
