@@ -18,14 +18,13 @@ public class Student extends User {
             String email,
             String phone,
             String password,
-            String rol,
             String academicProgram,
             String semester,
             String interestedArea,
             List<SoftSkill> softSkills,
             List<Knowledge> expertise
     ) {
-        super(id, username, firstName, lastName, email, phone, password, rol);
+        super(id, username, firstName, lastName, email, password, phone, "STUDENT");
         this.academicProgram = academicProgram;
         this.semester = semester;
         this.interestedArea = interestedArea;

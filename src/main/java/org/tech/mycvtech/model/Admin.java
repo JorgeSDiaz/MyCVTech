@@ -12,11 +12,10 @@ public class Admin extends User {
             String email,
             String phone,
             String password,
-            String rol,
             String accessLevel,
             String department
     ) {
-        super(id, username, firstName, lastName, email, phone, password, rol);
+        super(id, username, firstName, lastName, email, phone, password, "ADMIN");
         this.accessLevel = accessLevel;
         this.department = department;
     }
