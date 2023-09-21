@@ -1,5 +1,7 @@
 package org.tech.mycvtech.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,30 +12,10 @@ public class Student extends User {
     List<SoftSkill> softSkills;
     List<Knowledge> expertise;
 
-    public Student(
-            String id,
-            String username,
-            String firstName,
-            String lastName,
-            String email,
-            String phone,
-            String password,
-            String academicProgram,
-            String semester,
-            String interestedArea,
-            List<SoftSkill> softSkills,
-            List<Knowledge> expertise
-    ) {
-        super(id, username, firstName, lastName, email, password, phone, "STUDENT");
-        this.academicProgram = academicProgram;
-        this.semester = semester;
-        this.interestedArea = interestedArea;
-        System.out.println(softSkills);
+    public Student() {
+        this.rol = new Rol("STUDENT");
         this.softSkills = softSkills != null ? softSkills : new ArrayList<SoftSkill>();
         this.expertise = expertise != null ? expertise : new ArrayList<Knowledge>();
-    }
-
-    public Student() {
     }
 
     public String getAcademicProgram() {
@@ -60,11 +42,11 @@ public class Student extends User {
         this.interestedArea = interestedArea;
     }
 
-    public List<SoftSkill> getSkills() {
+    public List<SoftSkill> getSoftSkills() {
         return softSkills;
     }
 
-    public void addSkill(SoftSkill softSkill) {
+    public void addSoftSkill(SoftSkill softSkill) {
         this.softSkills.add(softSkill);
     }
 

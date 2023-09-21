@@ -1,7 +1,11 @@
 package org.tech.mycvtech.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Knowledge {
+    @JsonProperty("name")
     String name;
+    @JsonProperty("level")
     Level level;
 
     public Knowledge(String name, Level level) {
@@ -14,6 +18,5 @@ public class Knowledge {
     }
 
     public Knowledge() {
-        this("");
     }
 }

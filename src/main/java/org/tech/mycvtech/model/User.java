@@ -11,38 +11,18 @@ import java.util.Date;
 @Document("Users")
 public class User {
     @Id
-    private String id;
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
-    private String phone;
-    private Date createdAt;
-    private Rol rol;
-
-    public User(
-            String id,
-            String username,
-            String firstName,
-            String lastName,
-            String email,
-            String phone,
-            String password,
-            String rol
-    ) {
-        this.password = new BCryptPasswordEncoder().encode(password);
-        this.createdAt = new Date();
-        this.rol = new Rol(rol);
-        this.id = id;
-        this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.phone = phone;
-    }
+    protected String id;
+    protected String username;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+    protected String password;
+    protected String phone;
+    protected Date createdAt;
+    protected Rol rol;
 
     public User() {
+        this.createdAt = new Date();
     }
 
     public String getPhone() {

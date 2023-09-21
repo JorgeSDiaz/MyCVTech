@@ -4,20 +4,16 @@ public class Admin extends User {
     public String accessLevel;
     public String department;
 
-    public Admin(
-            String id,
-            String username,
-            String firstName,
-            String lastName,
-            String email,
-            String phone,
-            String password,
-            String accessLevel,
-            String department
-    ) {
-        super(id, username, firstName, lastName, email, phone, password, "ADMIN");
-        this.accessLevel = accessLevel;
-        this.department = department;
+    public Admin() {
+        if (this.accessLevel == null) {
+            this.accessLevel = "1";
+        }
+
+        if (this.department == null) {
+            this.department = "Unknown";
+        }
+
+        this.rol = new Rol("ADMIN");
     }
 
     public String getAccessLevel() {
