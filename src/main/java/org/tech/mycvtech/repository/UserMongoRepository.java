@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import org.tech.mycvtech.model.User;
 
 @Repository
-public interface UserMongoRepository extends MongoRepository<User, Long> {
+public interface UserMongoRepository extends MongoRepository<User, String> {
 }
