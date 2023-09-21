@@ -80,14 +80,33 @@ public class User {
 
     @JsonProperty
     public void setPassword(String password) {
-        this.password = new BCryptPasswordEncoder().encode(password);
-    }
-
-    protected void setRol(Rol rol) {
-        this.rol = rol;
+        this.password = password;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    protected void update(User userUpdates) {
+
+        if (userUpdates.getUsername() != null) {
+            setUsername(userUpdates.getUsername());
+        }
+
+        if (userUpdates.getFirstName() != null) {
+            setFirstName(userUpdates.getFirstName());
+        }
+
+        if (userUpdates.getLastName() != null) {
+            setLastName(userUpdates.getLastName());
+        }
+
+        if (userUpdates.getEmail() != null) {
+            setEmail(userUpdates.getEmail());
+        }
+
+        if (userUpdates.getPassword() != null) {
+            setPassword(userUpdates.getPassword());
+        }
     }
 }

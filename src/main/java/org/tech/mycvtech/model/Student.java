@@ -57,4 +57,21 @@ public class Student extends User {
     public void addKnowledge(Knowledge knowledge) {
         this.expertise.add(knowledge);
     }
+
+    public void update(Student studentUpdates) {
+        super.update(studentUpdates);
+
+        if (studentUpdates.getAcademicProgram() != null) {
+            setAcademicProgram(studentUpdates.getAcademicProgram());
+        }
+
+        if (studentUpdates.getSemester() != null) {
+            setSemester(studentUpdates.getSemester());
+        }
+
+        if (studentUpdates.getInterestedArea() != null) {
+            setInterestedArea(studentUpdates.getInterestedArea());
+        }
+
+    }
 }

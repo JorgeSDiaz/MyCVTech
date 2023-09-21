@@ -31,4 +31,12 @@ public class Admin extends User {
     public void setDepartment(String department) {
         this.department = department;
     }
+
+    public void update(Admin adminUpdates) {
+        super.update(adminUpdates);
+
+        if (adminUpdates.getAccessLevel() != null) {
+            setAccessLevel(adminUpdates.getAccessLevel());
+        }
+    }
 }
