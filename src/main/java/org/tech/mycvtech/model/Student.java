@@ -11,7 +11,7 @@ public class Student extends User {
     List<Knowledge> expertise;
 
     public Student(
-            Long id,
+            String id,
             String username,
             String firstName,
             String lastName,
@@ -28,6 +28,7 @@ public class Student extends User {
         this.academicProgram = academicProgram;
         this.semester = semester;
         this.interestedArea = interestedArea;
+        System.out.println(softSkills);
         this.softSkills = softSkills != null ? softSkills : new ArrayList<SoftSkill>();
         this.expertise = expertise != null ? expertise : new ArrayList<Knowledge>();
     }

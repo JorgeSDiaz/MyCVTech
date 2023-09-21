@@ -5,7 +5,7 @@ public class Admin extends User {
     public String department;
 
     public Admin(
-            Long id,
+            String id,
             String username,
             String firstName,
             String lastName,

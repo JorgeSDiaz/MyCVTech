@@ -2,12 +2,16 @@ package org.tech.mycvtech.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Date;
 
+@Document("Users")
 public class User {
-    private Long id;
+    @Id
+    private String id;
     private String username;
     private String firstName;
     private String lastName;
@@ -18,7 +22,7 @@ public class User {
     private Rol rol;
 
     public User(
-            Long id,
+            String id,
             String username,
             String firstName,
             String lastName,
@@ -27,15 +31,15 @@ public class User {
             String password,
             String rol
     ) {
+        this.password = new BCryptPasswordEncoder().encode(password);
+        this.createdAt = new Date();
+        this.rol = new Rol(rol);
         this.id = id;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phone = phone;
-        this.rol = new Rol(rol);
-        this.password = new BCryptPasswordEncoder().encode(password);
-        this.createdAt = new Date();
     }
 
     public User() {
@@ -45,7 +49,7 @@ public class User {
         return phone;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
