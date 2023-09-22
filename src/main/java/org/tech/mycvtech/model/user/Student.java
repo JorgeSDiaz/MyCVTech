@@ -21,7 +21,7 @@ public class Student extends User {
     List<Knowledge> expertise;
 
     public Student() {
-        this.rol = new Rol("STUDENT");
+        this.rol = Rol.USER;
         this.softSkills = softSkills != null ? softSkills : new ArrayList<>();
         this.expertise = expertise != null ? expertise : new ArrayList<>();
     }

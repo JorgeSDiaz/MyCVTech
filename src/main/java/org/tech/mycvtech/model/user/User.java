@@ -7,18 +7,22 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.tech.mycvtech.model.util.Rol;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Document("Users")
 @Builder
 @Data
 @AllArgsConstructor
-public class User {
+public class User implements UserDetails {
     @Id
     protected String id;
-    protected String username;
     protected String firstName;
     protected String lastName;
     protected String email;
@@ -31,9 +35,19 @@ public class User {
         this.createdAt = new Date();
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(rol.name()));
+    }
+
     @JsonIgnore
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
     }
 
     @JsonProperty
@@ -41,11 +55,27 @@ public class User {
         this.password = password;
     }
 
-    protected void update(User userUpdates) {
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 
-        if (userUpdates.getUsername() != null) {
-            setUsername(userUpdates.getUsername());
-        }
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    protected void update(User userUpdates) {
 
         if (userUpdates.getFirstName() != null) {
             setFirstName(userUpdates.getFirstName());

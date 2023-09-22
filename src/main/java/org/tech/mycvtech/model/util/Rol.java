@@ -6,11 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
-
-@Data
-@AllArgsConstructor
-public class Rol implements Serializable {
-    @JsonProperty("name")
-    String name;
+public enum Rol {
+    USER,
+    ADMIN
 }
 

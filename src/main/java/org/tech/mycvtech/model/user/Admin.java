@@ -21,7 +21,7 @@ public class Admin extends User {
             this.department = "Unknown";
         }
 
-        this.rol = new Rol("ADMIN");
+        this.rol = Rol.ADMIN;
     }
 
     public void update(Admin adminUpdates) {
