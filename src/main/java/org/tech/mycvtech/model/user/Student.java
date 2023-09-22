@@ -1,10 +1,18 @@
-package org.tech.mycvtech.model;
+package org.tech.mycvtech.model.user;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.tech.mycvtech.model.util.Knowledge;
+import org.tech.mycvtech.model.util.Rol;
+import org.tech.mycvtech.model.util.SoftSkill;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
+@Data
+@AllArgsConstructor
 public class Student extends User {
     String academicProgram;
     String semester;
@@ -14,44 +22,12 @@ public class Student extends User {
 
     public Student() {
         this.rol = new Rol("STUDENT");
-        this.softSkills = softSkills != null ? softSkills : new ArrayList<SoftSkill>();
-        this.expertise = expertise != null ? expertise : new ArrayList<Knowledge>();
-    }
-
-    public String getAcademicProgram() {
-        return academicProgram;
-    }
-
-    public void setAcademicProgram(String academicProgram) {
-        this.academicProgram = academicProgram;
-    }
-
-    public String getSemester() {
-        return semester;
-    }
-
-    public void setSemester(String semester) {
-        this.semester = semester;
-    }
-
-    public String getInterestedArea() {
-        return interestedArea;
-    }
-
-    public void setInterestedArea(String interestedArea) {
-        this.interestedArea = interestedArea;
-    }
-
-    public List<SoftSkill> getSoftSkills() {
-        return softSkills;
+        this.softSkills = softSkills != null ? softSkills : new ArrayList<>();
+        this.expertise = expertise != null ? expertise : new ArrayList<>();
     }
 
     public void addSoftSkill(SoftSkill softSkill) {
         this.softSkills.add(softSkill);
-    }
-
-    public List<Knowledge> getExpertise() {
-        return expertise;
     }
 
     public void addKnowledge(Knowledge knowledge) {

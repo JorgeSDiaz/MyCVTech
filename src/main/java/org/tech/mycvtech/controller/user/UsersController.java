@@ -1,13 +1,13 @@
-package org.tech.mycvtech.controller;
+package org.tech.mycvtech.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tech.mycvtech.model.Admin;
-import org.tech.mycvtech.model.Student;
-import org.tech.mycvtech.model.User;
-import org.tech.mycvtech.service.UsersService;
+import org.tech.mycvtech.model.user.Admin;
+import org.tech.mycvtech.model.user.Student;
+import org.tech.mycvtech.model.user.User;
+import org.tech.mycvtech.service.user.UsersService;
 
 import java.util.List;
 

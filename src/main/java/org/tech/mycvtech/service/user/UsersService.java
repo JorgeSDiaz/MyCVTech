@@ -1,14 +1,13 @@
-package org.tech.mycvtech.service;
+package org.tech.mycvtech.service.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.tech.mycvtech.model.Admin;
-import org.tech.mycvtech.model.Student;
-import org.tech.mycvtech.model.User;
+import org.tech.mycvtech.model.user.Admin;
+import org.tech.mycvtech.model.user.Student;
+import org.tech.mycvtech.model.user.User;
 import org.tech.mycvtech.repository.UserMongoRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UsersService {
