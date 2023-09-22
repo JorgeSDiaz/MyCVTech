@@ -1,4 +1,4 @@
-package org.tech.mycvtech.model;
+package org.tech.mycvtech.model.util;
 
 public enum Level {
     ZERO,

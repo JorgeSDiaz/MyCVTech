@@ -1,5 +1,13 @@
-package org.tech.mycvtech.model;
+package org.tech.mycvtech.model.user;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.tech.mycvtech.model.util.Rol;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
+@AllArgsConstructor
 public class Admin extends User {
     public String accessLevel;
     public String department;
@@ -14,22 +22,6 @@ public class Admin extends User {
         }
 
         this.rol = new Rol("ADMIN");
-    }
-
-    public String getAccessLevel() {
-        return accessLevel;
-    }
-
-    public void setAccessLevel(String accessLevel) {
-        this.accessLevel = accessLevel;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
     }
 
     public void update(Admin adminUpdates) {
