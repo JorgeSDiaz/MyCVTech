@@ -28,6 +28,8 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .requestMatchers("/v1/auth/**")
                 .permitAll()
+                .requestMatchers("/mycvtech-production.up.railway.app/**")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
