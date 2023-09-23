@@ -121,8 +121,8 @@ Authorization: Bearer YOUR_JWT
 ```
 
 ## Integrantes
-**Jorge David Sáenz Diaz **
-**Julian David Castillo Soto **
-**Sebastian Porras Rozo **
-**Camilo Andres Cantillo Tatis **
-**Santiago Cárdenas Amaya **
+* **[Jorge David Sáenz Diaz](https://www.linkedin.com/in/jorgedsaenzd/)**
+* **[Julian David Castillo Soto](https://www.linkedin.com/in/juliancs21/)**
+* **[Sebastian Porras Rozo](https://www.linkedin.com/in/sebasti%C3%A1n-porras-rozo/)**
+* **[Camilo Andres Cantillo Tatis](https://www.linkedin.com/in/camilocanta/)**
+* **[Santiago Cárdenas Amaya](https://www.linkedin.com/in/santiago-c%C3%A1rdenas-amaya-63759921b/)**
