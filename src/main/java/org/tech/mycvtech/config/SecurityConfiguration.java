@@ -21,10 +21,14 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .cors()
+                .and()
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/v1/auth/**")
+                .permitAll()
+                .requestMatchers("/mycvtech-production.up.railway.app/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
