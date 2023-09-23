@@ -5,6 +5,7 @@ La plataforma busca desarrollar el perfil profesional de los estudiantes de carr
 
 ## Documentacion EndPoint's
 
+```
 ADMIN
 {
 "firstName": "string",
@@ -15,7 +16,9 @@ ADMIN
 "accessLevel": "string",
 "department": "string"
 }
+```
 
+```
 Student
 {
 "firstName": "string",
@@ -38,6 +41,7 @@ Student
     }
 ]
 }
+```
 
 ### Get a list of all users
 GET /users
@@ -55,6 +59,8 @@ Authorization: Bearer YOUR_JWT
 POST /students
 Content-Type: application/json
 Authorization: Bearer YOUR_JWT
+
+```
 {
 "firstName": "Juan",
 "lastName": "Pérez",
@@ -73,19 +79,25 @@ Authorization: Bearer YOUR_JWT
     { "name": "Python", "level": "GOOD" }
 ]
 }
+```
 
 ### Update an existing student
 PUT /students/1234567890
 Content-Type: application/json
 Authorization: Bearer YOUR_JWT
+
+```
 {
 "fristName": "Jane Doe"
 }
+```
 
 ### Add a new admin
 POST /admins
 Content-Type: application/json
 Authorization: Bearer YOUR_JWT
+
+```
 {
 "firstName": "Luisa",
 "lastName": "Pérez",
@@ -95,18 +107,22 @@ Authorization: Bearer YOUR_JWT
 "accessLevel": "5",
 "department": "Área de Admisiones"
 }
+```
 
 ### Update an existing admin
 PUT /admins/1234567890
 Content-Type: application/json
 Authorization: Bearer YOUR_JWT
+
+```
 {
 "password": "newpassword"
 }
+```
 
 ## Integrantes
-**Jorge David Sáenz Diaz **
-**Julian David Castillo Soto **
-**Sebastian Porras Rozo **
-**Camilo Andres Cantillo Tatis **
-**Santiago Cárdenas Amaya **
+* **[Jorge David Sáenz Diaz](https://www.linkedin.com/in/jorgedsaenzd/)**
+* **[Julian David Castillo Soto](https://www.linkedin.com/in/juliancs21/)**
+* **[Sebastian Porras Rozo](https://www.linkedin.com/in/sebasti%C3%A1n-porras-rozo/)**
+* **[Camilo Andres Cantillo Tatis](https://www.linkedin.com/in/camilocanta/)**
+* **[Santiago Cárdenas Amaya](https://www.linkedin.com/in/santiago-c%C3%A1rdenas-amaya-63759921b/)**
