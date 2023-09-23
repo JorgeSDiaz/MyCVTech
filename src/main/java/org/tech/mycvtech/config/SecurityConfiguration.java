@@ -30,6 +30,8 @@ public class SecurityConfiguration {
                 .permitAll()
                 .requestMatchers("/mycvtech-production.up.railway.app/**")
                 .permitAll()
+                .requestMatchers("/health")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
