@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,9 +24,16 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     protected String id;
+    @Getter
     protected String firstName;
+
+
     protected String lastName;
+
+
     protected String email;
+
+
     protected String password;
     protected String phone;
     protected Date createdAt;
