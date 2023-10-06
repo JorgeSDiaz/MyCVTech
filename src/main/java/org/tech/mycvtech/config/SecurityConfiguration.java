@@ -32,6 +32,8 @@ public class SecurityConfiguration {
                 .permitAll()
                 .requestMatchers("/health")
                 .permitAll()
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
