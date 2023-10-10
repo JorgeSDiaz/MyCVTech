@@ -28,8 +28,6 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .requestMatchers("/v1/auth/**")
                 .permitAll()
-                .requestMatchers("/mycvtech-production.up.railway.app/**")
-                .permitAll()
                 .requestMatchers("/health")
                 .permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html")
