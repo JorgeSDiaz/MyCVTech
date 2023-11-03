@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex; /* Utiliza flexbox para dividir en dos columnas */
+        }
+        .left-column {
+            width: 66%; /* Columna izquierda ocupa el 66% */
+            padding-right: 20px; /* Espacio entre columnas */
+        }
+        .right-column {
+            width: 34%; /* Columna derecha ocupa el 34% */
+            background-color: #f0f6ff; /* Fondo azul claro */
+            padding: 20px; /* Espacio dentro de la columna */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <h1>Hoja de Vida</h1>
+        <div class="section">
+            <h2>Resumen de Perfil</h2>
+            <p>
+                Escribe aquí un resumen breve de tu perfil y objetivos profesionales.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <!-- Agrega más habilidades -->
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Logros</h2>
+            <p>
+                Describe tus logros académicos o profesionales aquí.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+                <li>
+                    <h3>Nombre de la Empresa</h3>
+                    <p>Puesto - Fecha de inicio - Fecha de finalización</p>
+                    <p>Descripción de tus responsabilidades y logros.</p>
+                </li>
+                <!-- Agrega más experiencias laborales si es necesario -->
+            </ul>
+        </div>
+    </div>
+    <div class="right-column">
+        <h2>Datos Personales</h2>
+        <ul>
+            <li><span class="contact">Nombre:</span> Tu Nombre</li>
+            <li><span class="contact">Dirección:</span> Tu Dirección</li>
+            <li><span class="contact">Teléfono:</span> Tu Teléfono</li>
+            <li><span class="contact">Correo Electrónico:</span> Tu Correo Electrónico</li>
+            <!-- Agrega más datos personales si es necesario -->
+        </ul>
+
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/tuperfil" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.github.com/tuperfil" target="_blank">GitHub</a></li>
+            <!-- Agrega más redes sociales si es necesario -->
+        </ul>
+    </div>
+</div>
+</body>
+</html>
